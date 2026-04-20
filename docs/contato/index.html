@@ -147,32 +147,34 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Tem alguma dúvida sobre o curso <strong>Do Dado ao Artigo</strong>, o livro <strong>Universo R</strong> ou quer colaborar em algum projeto de Oceanografia? Preencha o formulário abaixo e responderei o mais breve possível.</p>
-<div class="contact-form" style="max-width: 600px; margin: 20px 0;">
-  <form action="[https://formspree.io/f/xpwzyqjr](https://formspree.io/f/xpwzyqjr)" method="POST">
+<div class="contact-card">
+  <form action="[https://formspree.io/f/xvzdbkdg](https://formspree.io/f/xvzdbkdg)" method="POST">
     
-    <div style="margin-bottom: 15px;">
-      <label style="display: block; font-weight: bold;">Nome Completo</label>
-      <input type="text" name="name" required="" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+    <div class="form-group">
+      <label for="name">Nome Completo</label>
+      <input type="text" name="name" id="name" required="">
     </div>
 
-    <div style="margin-bottom: 15px;">
-      <label style="display: block; font-weight: bold;">E-mail</label>
-      <input type="email" name="_replyto" required="" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <input type="email" name="_replyto" id="email" required="">
     </div>
 
-    <div style="margin-bottom: 15px;">
-      <label style="display: block; font-weight: bold;">Assunto</label>
-      <input type="text" name="subject" required="" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+    <div class="form-group">
+      <label for="subject">Assunto</label>
+      <input type="text" name="subject" id="subject" required="">
     </div>
 
-    <div style="margin-bottom: 15px;">
-      <label style="display: block; font-weight: bold;">Mensagem</label>
-      <textarea name="message" rows="5" required="" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;"></textarea>
+    <div class="form-group">
+      <label for="message">Mensagem</label>
+      <textarea name="message" id="message" rows="5" required=""></textarea>
     </div>
 
-    <button type="submit" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+    <button type="submit" class="btn-submit-elegant">
       Enviar Mensagem
     </button>
+    
+    <input type="hidden" name="_next" value="/contato/obrigado.html">
   </form>
 </div>
 

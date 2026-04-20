@@ -3,91 +3,118 @@ title: ""
 page-layout: full
 ---
 
-::: {.curie-quote-box style="background-image: linear-gradient(120deg, rgba(35,9,58,.88), rgba(12,45,92,.78)), url('https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1800&q=80'); color: #f8f9fa;"}
-::: {.curie-quote-content}
-<h3 style="color: #ffffff;">☢ Ciência e Coragem</h3>
+::: {.column-screen}
+```{=html}
+<style>
+    :root { --accent: #2c3e50; }
+    .hero {
+        padding: 80px 0;
+        background-color: #f8f9fa;
+        text-align: center;
+    }
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin: 50px 0;
+    }
+    .feature-card {
+        padding: 30px;
+        border: 1px solid #eee;
+        border-radius: 12px;
+        text-align: center;
+        background: white;
+    }
+    .resource-box {
+        padding: 25px;
+        background: white;
+        border-radius: 8px;
+        border: 1px solid #eaeaea;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .community-section {
+        text-align: center;
+        padding: 80px 0;
+        background: #f4f4f4;
+    }
+    .container-custom {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+</style>
 
-> "Nada na vida deve ser temido, apenas compreendido. Agora é a hora de compreender mais, para que possamos temer menos."
->
-> — Marie Skłodowska-Curie
-
-<i class="bi bi-radioactive"></i>
-:::
-:::
-
-
-::: {.hero-box style="background-image: linear-gradient(120deg, rgba(6,33,52,.85), rgba(15,78,112,.75)), url('https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1800&q=80');"}
-::: {.hero-content}
-
-[Biólogo • Ecologia Marinha • Modelagem Estatística]{.subtitle}
-
-Transformo dados ecológicos complexos em evidências científicas robustas para pesquisa, conservação e tomada de decisão.
-
-::: {.hero-buttons}
-[Ver Projetos](#projetos){.btn .btn-primary}
-[Contato](#contato){.btn .btn-light}
-:::
-:::
-:::
-
-
-
-## Sobre
-
-Sou biólogo com foco em ecologia de comunidades e métodos quantitativos aplicados à biodiversidade marinha. Minha atuação integra modelagem estatística, sensoriamento remoto, visualização de dados e formação de pesquisadores para elevar a qualidade analítica de estudos ecológicos.
-
-## Linhas de pesquisa {#linhas}
-
-::: {.features-grid}
-::: {.feature-card}
-### <i class="bi bi-water"></i> Ecologia de Comunidades
-Estrutura e dinâmica da biodiversidade em ambientes costeiros e estuarinos, com abordagem funcional, filogenética e taxonômica.
-:::
-
-::: {.feature-card}
-### <i class="bi bi-graph-up"></i> Modelagem em R
-GLMs, GAMs, modelos mistos, análise multivariada e séries temporais para inferência ecológica mais robusta.
-:::
-
-::: {.feature-card}
-### <i class="bi bi-mortarboard"></i> Formação Científica
-Treinamentos práticos para quem deseja sair do "dado bruto" e chegar ao artigo com mais segurança metodológica.
-:::
-:::
-
-## Projetos em destaque {#projetos}
-
-::: {.projects-grid}
-::: {.project-card}
-![](Imagens/samerica.jpg)
-### Monitoramento ecológico costeiro
-Modelagem de diversidade e sazonalidade em gradientes ambientais estuarinos.
-[Ver estudo](#){.project-link}
+<section class="hero">
+    <div class="container-custom">
+        <h1 style="font-weight: 800; font-size: 2.5rem;">Explorando o Universo R</h1>
+        <p style="font-size: 1.2rem; color: #555;">Curadoria, inteligência de dados e as últimas fronteiras da computação estatística.</p>
+        <div style="margin-top: 30px;">
+            <a href="./postagens.html" style="background: var(--accent); color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: 600;">Ver Todas as Postagens</a>
+        </div>
+    </div>
+</section>
+```
 :::
 
-::: {.project-card}
-![](Imagens/copepod.png)
-### Diversidade funcional de copépodes
-Integração de traços funcionais e abundância para métricas de redundância ecológica.
-[Ver estudo](#){.project-link}
+::: {.column-page}
+```{=html}
+<div class="feature-grid">
+    <div class="feature-card">
+        <h3 style="color: var(--accent);">Ciência de Dados</h3>
+        <p>Modelagem avançada e tratamento de grandes volumes de dados.</p>
+    </div>
+    <div class="feature-card">
+        <h3 style="color: var(--accent);">Visualização</h3>
+        <p>Criação de gráficos autorais e dashboards interativos com Shiny.</p>
+    </div>
+    <div class="feature-card">
+        <h3 style="color: var(--accent);">Educação</h3>
+        <p>Treinamentos in-company e produção de conteúdo técnico.</p>
+    </div>
+</div>
+
+<h2 style="border-left: 5px solid var(--accent); padding-left: 15px; margin-bottom: 30px;">Radar R: O que acompanhar</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px;">
+    <div class="resource-box">
+        <h4 style="color: var(--accent);">Versão Atual do R</h4>
+        <p>Fique de olho no <strong id="r-version">R carregando...</strong>.</p>
+        <a href="[https://cran.r-project.org/doc/manuals/r-release/NEWS.html](https://cran.r-project.org/doc/manuals/r-release/NEWS.html)" target="_blank" style="text-decoration: none; font-weight: bold; color: var(--accent);">Ler NEWS oficial →</a>
+    </div>
+    <div class="resource-box">
+        <h4 style="color: var(--accent);">CRAN Task Views</h4>
+        <p>O mapa definitivo para pacotes por área de atuação.</p>
+        <a href="[https://cran.r-project.org/web/views/](https://cran.r-project.org/web/views/)" target="_blank" style="text-decoration: none; font-weight: bold; color: var(--accent);">Explorar Task Views →</a>
+    </div>
+</div>
+```
 :::
 
-::: {.project-card}
-![](Imagens/estatistica.png)
-### Curso: Do Dado ao Artigo
-Formação aplicada em organização de dados, análise em R e escrita científica orientada.
-[Saiba mais](#){.project-link}
+::: {.column-screen}
+```{=html}
+<section class="community-section">
+    <div class="container-custom">
+        <h2>Curiosidades e Comunidade</h2>
+        <p>O R é movido pela comunidade. Explore fontes globais de conhecimento.</p>
+        <div style="display: flex; justify-content: center; gap: 20px; margin-top: 30px;">
+            <a href="[https://www.r-bloggers.com/](https://www.r-bloggers.com/)" target="_blank" style="padding: 12px 25px; border: 2px solid var(--accent); text-decoration: none; color: var(--accent); font-weight: bold; border-radius: 5px;">R-Bloggers</a>
+            <a href="[https://rweekly.org/](https://rweekly.org/)" target="_blank" style="padding: 12px 25px; border: 2px solid var(--accent); text-decoration: none; color: var(--accent); font-weight: bold; border-radius: 5px;">R Weekly</a>
+        </div>
+    </div>
+</section>
+
+<script>
+    async function fetchRVersion() {
+        try {
+            const response = await fetch('[https://r-pkg.org/api/v1/r-version](https://r-pkg.org/api/v1/r-version)');
+            const data = await response.json();
+            if (data && data.version) {
+                document.getElementById('r-version').innerText = 'R ' + data.version;
+            }
+        } catch (error) {
+            document.getElementById('r-version').innerText = 'R 4.3.0+'; 
+        }
+    }
+    fetchRVersion();
+</script>
+```
 :::
-:::
-
-
-## Contato {#contato}
-
-- <i class="bi bi-envelope-at"></i> [wesley.neves@ufpe.br](mailto:wesley.neves@ufpe.br)
-- <i class="bi bi-github"></i> [github.com/wesneves](https://github.com/wesneves)
-
-
-
----
-
-

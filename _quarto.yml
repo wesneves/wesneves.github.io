@@ -10,12 +10,17 @@ website:
     background: white
     search: true
     left:
-      - href: about.qmd
-        text: Sobre
-      - href: curso.qmd
-        text: "🎓 Curso Sympla"
+      - href: sobre/about.qmd
+        text: "🪪 Sobre"
       - href: posts/index.qmd
-        text: Blog/Dicas
+        text: "📝 Blog/Dicas"
+      - href: sursos/curso.qmd
+        text: "🎓  Cursos"
+      - href: livros/index.qmd
+        text: "🪪 Livros"         
+      - href: contato/index.qmd
+        text: "📲 Contato" 
+      
 
 format:
   html:

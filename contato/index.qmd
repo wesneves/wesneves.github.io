@@ -1,0 +1,8 @@
+---
+title: "Entre em Contato"
+listing:
+  contents: "."
+  type: default
+  categories: true
+  sort: "date desc"
+---

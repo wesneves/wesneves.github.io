@@ -14,7 +14,7 @@ website:
         text: "🪪 Sobre"
       - href: posts/index.qmd
         text: "📝 Blog/Dicas"
-      - href: sursos/curso.qmd
+      - href: cursos/index.qmd
         text: "🎓  Cursos"
       - href: livros/index.qmd
         text: "🪪 Livros"         

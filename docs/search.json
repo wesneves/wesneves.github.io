@@ -1,157 +1,45 @@
 [
   {
-    "objectID": "posts/Token.html",
-    "href": "posts/Token.html",
-    "title": "Token do GitHub para o RStudio",
-    "section": "",
-    "text": "O que é e para que preciso do TOKEN?\nPrecisamos criar um token, pois quando interagimos com um servidor Git remoto (como o GitHub, por exemplo) é necessário incluir credenciais na solicitação, isso acontece na hora que em que estamos utilizando o RStudio e precisamos sincronizar/enviar as alterações feitas no RStudio para o GitHub, para isso será necessário utilizar o comando commit e o comando push na aba git do RStudio. Tal credenciamento prova que somos um usuário específico do GitHub que tem permissão para fazer o que estivermos pedindo, já que quaisquer alterações realizadas no nosso repositório é mostrado no GitHub pela credencial do usuário.\nA senha que nós utilizamos para fazer login no site do GitHub NÃO é uma credencial aceitável ao conversar com o GitHub como um servidor Git, graças a uma atulização de segurança na plataforma. Por isso é necessário a criação de um TOKEN para realizar a sincronização entre o RStudio e o GitHub.\n\n\nCriando o TOKEN no RStudio\n\nDefinir seu nome de usuário GitHub e o seu email vinculado\n\nusethis :: use_git_config( user.name  =  \" SeuNome \" , user.email  =  \" seu@email.com \" )\n\nPacotes necessários para criar o Token:\n\ninstall.packages(c(\"gh\", \"usethis\", \"gitcreds\", \"credentials\"))\n\nCrie um token de acesso pessoal para a autenticação\n\nusethis::create_github_token()\n\nEssa linha de comando configura o seu token abrindo uma janela no navegador onde irá pedir a confirmação da senha no GitHub, após executar esse comando devemos copiar o token gerado, para tal faz-se necessário estabelecer um prazo de validade para o token e algumas permissões adicionais.\n\n\nDefina seu token no RStudio com o pacote credentials:\n\n``\ncredentials::set_github_pat(\"seuTOKEN\")\n\nReinicie o R!\nVerifique as Configurações:\n\nusethis :: git_sitrep()\nCom esse comando iremos notar algumas informações sobre nosso perfil, além disso o relatório feito deve conter alguma informação sobre o token de acesso pessoal.\nPara verificarmos o nosso TOKEN é necessário utilizar o comando: gh::gh_whoami()\nO seguinte comando revela o nosso token: gitcreds::gitcreds_get()$password"
-  },
-  {
-    "objectID": "posts/rmakdown.html",
-    "href": "posts/rmakdown.html",
-    "title": "Rmarkdown",
-    "section": "",
-    "text": "Inicialmente é necessário baixar o pacote rmarkdown no RStudio, em seguida podemos criar um novo arquivo rmarkdown em file - new file - R Markdown.\nPara facilitar a aprendizagem dessa sintaxe de formatação da escrita nós podemos utilizar o botão Switch to sourve editor (um botão que parece um compasso que se localiza abaixo do botão de maximizar da janela onde o arquivo rmarkdown será aberto).\nCom essa função ativa, o autor não precisará gravar linhas de comandos para adicionar, títulos, tópicos, letras em negrito, adicionar código, imagens, links, citações etc. Todas essas funcionalidades ficam disponíveis no painel da aba rmakdown.\nApós escrever os comandos necessário para o nosso relatório, basta visualizar o relatório no formato desejado, que no nosso caso seria o HTML, para tal, será necessário antes salvar o arquivo e só então apertar o botão knit para visualizar o resultado através da aba viwer no quadrante onde ficam os pacotes e arquivos do RStudio.\nUm conselho seria consultar todas as funcionalidades disponibilizadas no cabeçalho da aba e gravar os atalhos no teclado para agilizar nossa escrita."
-  },
-  {
-    "objectID": "posts/rmakdown.html#documento-gerado-automaticamente-após-criar-um-arquivo-r-markdown-no-rstudio",
-    "href": "posts/rmakdown.html#documento-gerado-automaticamente-após-criar-um-arquivo-r-markdown-no-rstudio",
-    "title": "Rmarkdown",
-    "section": "Documento gerado automaticamente após criar um arquivo R markdown no RStudio",
-    "text": "Documento gerado automaticamente após criar um arquivo R markdown no RStudio\nMarkdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.\nWhen you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:\n\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00"
-  },
-  {
-    "objectID": "posts/rmakdown.html#including-plots",
-    "href": "posts/rmakdown.html#including-plots",
-    "title": "Rmarkdown",
-    "section": "Including Plots",
-    "text": "Including Plots\nYou can also embed plots, for example:\n\n\n\n\n\n\n\n\n\nNote that the echo = FALSE parameter was added to the code chunk to prevent printing of the R code that generated the plot."
-  },
-  {
-    "objectID": "posts/index.html",
-    "href": "posts/index.html",
-    "title": "Blog & Dicas de R",
-    "section": "",
-    "text": "Faça seu pacote no RStudio do Zero\n\n\n\nR\n\n\n\n\n\n\n\n\n\n11 de ago. de 2023\n\n\nWesley Neves\n\n\n\n\n\n\n\n\n\n\n\n\nToken do GitHub para o RStudio\n\n\n\nGitHub\n\n\n\n\n\n\n\n\n\n4 de fev. de 2022\n\n\nWesley Neves\n\n\n\n\n\n\n\n\n\n\n\n\nGitHub no R: Sincronizando repositórios no RStudio\n\n\n\nGitHub\n\n\n\n\n\n\n\n\n\n17 de jan. de 2022\n\n\nWesley Neves\n\n\n\n\n\n\n\n\n\n\n\n\nRmarkdown\n\n\n\nR\n\n\n\n\n\n\n\n\n\n17 de jan. de 2022\n\n\nWesley Neves\n\n\n\n\n\n\n\n\n\n\n\n\nSobre o Programa R\n\n\n\nR\n\n\n\n\n\n\n\n\n\n12 de jan. de 2022\n\n\nWesley Neves\n\n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Wesley Neves",
-    "section": "",
-    "text": "“Nada na vida deve ser temido, apenas compreendido. Agora é a hora de compreender mais, para que possamos temer menos.”\n— Marie Skłodowska-Curie"
-  },
-  {
-    "objectID": "index.html#sobre",
-    "href": "index.html#sobre",
-    "title": "Wesley Neves",
-    "section": "Sobre",
-    "text": "Sobre\nSou biólogo com foco em ecologia de comunidades e métodos quantitativos aplicados à biodiversidade marinha. Minha atuação integra modelagem estatística, sensoriamento remoto, visualização de dados e formação de pesquisadores para elevar a qualidade analítica de estudos ecológicos."
-  },
-  {
-    "objectID": "index.html#linhas",
-    "href": "index.html#linhas",
-    "title": "Wesley Neves",
-    "section": "Linhas de pesquisa",
-    "text": "Linhas de pesquisa\n\n\n Ecologia de Comunidades\nEstrutura e dinâmica da biodiversidade em ambientes costeiros e estuarinos, com abordagem funcional, filogenética e taxonômica.\n\n\n Modelagem em R\nGLMs, GAMs, modelos mistos, análise multivariada e séries temporais para inferência ecológica mais robusta.\n\n\n Formação Científica\nTreinamentos práticos para quem deseja sair do “dado bruto” e chegar ao artigo com mais segurança metodológica."
-  },
-  {
-    "objectID": "index.html#projetos",
-    "href": "index.html#projetos",
-    "title": "Wesley Neves",
-    "section": "Projetos em destaque",
-    "text": "Projetos em destaque\n\n\n ### Monitoramento ecológico costeiro Modelagem de diversidade e sazonalidade em gradientes ambientais estuarinos. Ver estudo\n\n\n ### Diversidade funcional de copépodes Integração de traços funcionais e abundância para métricas de redundância ecológica. Ver estudo\n\n\n ### Curso: Do Dado ao Artigo Formação aplicada em organização de dados, análise em R e escrita científica orientada. Saiba mais"
-  },
-  {
-    "objectID": "index.html#contato",
-    "href": "index.html#contato",
-    "title": "Wesley Neves",
-    "section": "Contato",
-    "text": "Contato\n\n wesley.neves@ufpe.br\n github.com/wesneves"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
+    "objectID": "sobre/about.html",
+    "href": "sobre/about.html",
     "title": "Sobre",
     "section": "",
     "text": "Dedicado à compreensão da biodiversidade marinha através de lentes quantitativas. Especialista em ecologia de comunidades marinhas e modelagem estatística, atuo na interseção entre a oceanografia biológica e a ciência de dados, desenvolvendo soluções analíticas em R para problemas ecológicos complexos."
   },
   {
-    "objectID": "about.html#formação-acadêmica",
-    "href": "about.html#formação-acadêmica",
+    "objectID": "sobre/about.html#formação-acadêmica",
+    "href": "sobre/about.html#formação-acadêmica",
     "title": "Sobre",
     "section": "Formação Acadêmica",
     "text": "Formação Acadêmica\n\nDoutorado em Oceanografia (Em andamento) | Universidade Federal de Pernambuco\nMestrado em Biologia Animal| Universidade Federal de Pernambuco\nGraduação em Ciências Biológicas| Universidade Federal de Pernambuco"
   },
   {
-    "objectID": "about.html#experiência-com-ensino",
-    "href": "about.html#experiência-com-ensino",
+    "objectID": "sobre/about.html#experiência-com-ensino",
+    "href": "sobre/about.html#experiência-com-ensino",
     "title": "Sobre",
     "section": "Experiência com Ensino",
     "text": "Experiência com Ensino\nComo instrutor de Data Science, foco na democratização de ferramentas computacionais para pesquisadores, ministrando cursos de R aplicados à análise de dados biológicos."
   },
   {
-    "objectID": "curso.html",
-    "href": "curso.html",
-    "title": "Do Dado ao Artigo",
+    "objectID": "posts/Sobre_R.html",
+    "href": "posts/Sobre_R.html",
+    "title": "Sobre o Programa R",
     "section": "",
-    "text": "Este treinamento foi desenhado para transformar a sua relação com dados científicos. Vamos superar a barreira do código básico para alcançar uma produção científica robusta, reprodutível e visualmente impecável. Da limpeza dos dados à submissão do artigo, o R será seu maior aliado."
+    "text": "Segundo o site oficial do programa o R é uma linguagem e ambiente para computação com foco em estatística e gráficos, é importante perceber que esse ambiente de programação nada mais é que um projeto GNU semelhante a linguagem e ambiente S desenvolvido pela Bell Laboratories por John Chambers e colegas. Por ser basicamente um projeto GNU, o R é um software livre que pode ser estendido através da utilização de pacotes por meio da família CRAN de sites da internet. O termo ambiente pretende caracterizar o R como um sistema totalmente planejado e coerente e ai está a principal diferença entre esse ambiente com os sofwares de análise de dados, o R permite ao pesquisador certa liberdade na hora da análise de dados, já que tal ambiente de programação acompanha o progresso científico, ou seja: novas abordagens metodológicas são desenvolvidas e disponibilizadas nessa plataforma através da criação de pacotes estatísticos, que são disponibilizados para a comunidade científicas através da página oficial CRAN ou pelo github.\nO programa foi desenvolvido por George Ross Ihaka e Robert Clifford Gentleman em 1991, nesta ocasião, os professores (Ihaka e Gentleman) que trabalhavam na Universidade de Auckland (Nova Zelândia) desenvolveram uma alternativa à linguagem S, na qual foi oficialmente divulgado em 1995. Em 1997, um grupo central responsável pelas atualizações e estabilizações do programa foi criado e chamado de R Development Core Team, no mesmo ano surgiu o CRAN (Comprehensive R Archive Network) que consiste num conjunto de sites (espelhos) que transportam material idêntico com as contribuições do R de uma forma geral.\nA linguagem R é uma linguagem interpretada, isto é, o código fonte nessa linguagem é executado por um programa de computador (interpretador) na qual interpreta linha por linha (e aqui está a diferença entre uma linguagem compilada e uma interpretada, na linguagem compilada o compilador converte todo o código de uma vez para a linguagem binária, por causa disso o processo compilado é muito mais rápido que o traduzido, na qual o processo é repetitivo, pois o interpretador processa o código linha por linha) que em seguida é processado pelo sistema operacional ou processador."
   },
   {
-    "objectID": "curso.html#roteiro-da-jornada",
-    "href": "curso.html#roteiro-da-jornada",
-    "title": "Do Dado ao Artigo",
-    "section": "🗺️ Roteiro da Jornada",
-    "text": "🗺️ Roteiro da Jornada\n\n💻 Módulo 1: Fundamentos & Tidyverse🌿 Módulo 2: Ecologia & Estatística⚙️ Módulo 3: Desenvolvimento📄 Módulo 4: Produção Científica\n\n\n12 horas | O alicerce da manipulação moderna\nNeste módulo, dominamos o fluxo de trabalho profissional, garantindo que você nunca mais se perca em planilhas confusas.\n\nAula 01: O Ecossistema R e RStudio (Instalação e Lógica de Objetos).\nAula 02: Manipulação com dplyr: O poder do Pipe (|&gt;) para filtros, seleções e transformações.\nAula 03: Visualização com ggplot2: A gramática dos gráficos para publicações de alto impacto.\n\n\n\n12 horas | Onde a teoria encontra o código\nAplicamos ferramentas estatísticas e ecológicas em dados reais, focando na interpretação biológica dos resultados.\n\nAula 04: Modelagem Estatística: De testes clássicos (ANOVA/t) aos Modelos Lineares Generalizados (GLM).\nAula 05: Ecologia de Comunidades I: Diversidade, Riqueza e o indispensável pacote vegan.\nAula 06: Ecologia de Comunidades II: Análises Multivariadas (PCA, nMDS e PERMANOVA).\n\n\n\n8 horas | De usuário a desenvolvedor\nAutomatize tarefas repetitivas e aprenda a organizar seu próprio fluxo de ferramentas.\n\nAula 07: Programação Funcional: Automatização com a família apply e o pacote purrr.\nAula 08: Engenharia de Funções e Pacotes: Como criar suas próprias ferramentas e documentá-las.\n\n\n\n8 horas | A apresentação final da ciência\nO toque final: transformar códigos em documentos profissionais e relatórios dinâmicos.\n\nAula 09: Comunicação com RMarkdown e LaTeX: Inserção de equações e controle de chunks.\nAula 10: Customização Web e Projeto Final: CSS personalizado e a entrega do seu relatório integrativo."
+    "objectID": "posts/Sobre_R.html#instalando-o-r-e-rstudio-no-windows",
+    "href": "posts/Sobre_R.html#instalando-o-r-e-rstudio-no-windows",
+    "title": "Sobre o Programa R",
+    "section": "Instalando o R e RStudio no Windows",
+    "text": "Instalando o R e RStudio no Windows\nPodemos instalar o R nesse link e o RStudio nesse respectivamente"
   },
   {
-    "objectID": "curso.html#informações-práticas",
-    "href": "curso.html#informações-práticas",
-    "title": "Do Dado ao Artigo",
-    "section": "📌 Informações Práticas",
-    "text": "📌 Informações Práticas\n\n📅 Início: 28/02/2026 , às 08:00h.\n⏳ Carga Horária: 40 horas com emissão de certificado.\n🎥 Formato: Aulas ao vivo com suporte prático.\n\nAcessar Evento Sympla"
-  },
-  {
-    "objectID": "curso.html#área-exclusiva-do-aluno",
-    "href": "curso.html#área-exclusiva-do-aluno",
-    "title": "Do Dado ao Artigo",
-    "section": "🔐 Área Exclusiva do Aluno",
-    "text": "🔐 Área Exclusiva do Aluno\n\n\n\n\n\n\nAvisoClique para expandir: Materiais e Scripts das Aulas\n\n\n\n\n\nPara garantir a integridade dos scripts desenvolvidos em aula, os arquivos abaixo estão compactados e protegidos por senha.\nA senha foi disponibilizada no chat da sala virtual e no e-mail de boas-vindas do Sympla.\n\n\n\nConteúdo\nLink de Acesso\nFormato\n\n\n\n\nScript e Conteúdo - Aula 1\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 2\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 3\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 4\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 5\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 6\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 7\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 8\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 9\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 10\nAcessar Pasta\n.ZIP (Protegido)\n\n\n\nProblemas com o acesso? Entre em contato pelo chat do Sympla."
-  },
-  {
-    "objectID": "posts/GitHub.html",
-    "href": "posts/GitHub.html",
-    "title": "GitHub no R: Sincronizando repositórios no RStudio",
-    "section": "",
-    "text": "Para distros ubuntu e debian abra o terminal e digite o comando: sudo apt-get install git.\nnas distros fedora ou RedHat digite: sudo yum install git.\n\n\n\nBasta instalar o Git pelo site apertando no download."
-  },
-  {
-    "objectID": "posts/GitHub.html#linux",
-    "href": "posts/GitHub.html#linux",
-    "title": "GitHub no R: Sincronizando repositórios no RStudio",
-    "section": "",
-    "text": "Para distros ubuntu e debian abra o terminal e digite o comando: sudo apt-get install git.\nnas distros fedora ou RedHat digite: sudo yum install git."
-  },
-  {
-    "objectID": "posts/GitHub.html#windows",
-    "href": "posts/GitHub.html#windows",
-    "title": "GitHub no R: Sincronizando repositórios no RStudio",
-    "section": "",
-    "text": "Basta instalar o Git pelo site apertando no download."
-  },
-  {
-    "objectID": "posts/GitHub.html#no-rstudio",
-    "href": "posts/GitHub.html#no-rstudio",
-    "title": "GitHub no R: Sincronizando repositórios no RStudio",
-    "section": "No RStudio",
-    "text": "No RStudio\nO próximo passo é ir ao RStudio e criar um novo Projeto: File- New Project - Version Control - Git, em seguida iremos colar o código HTTPS copiado do nosso repositório GitHub na parte Repository URL:\nOBS&gt; O nome do nosso repositório aparece automaticamente assim que colamos o código no Git do RStudio, escolhemos o nosso subrepositório (uma pasta que devemos criar onde será estabelecida a sincronização das pastas na memória do computador com o repositório no GitHUb)."
-  },
-  {
-    "objectID": "posts/GitHub.html#rproj",
-    "href": "posts/GitHub.html#rproj",
-    "title": "GitHub no R: Sincronizando repositórios no RStudio",
-    "section": ".Rproj",
-    "text": ".Rproj\nÉ um arquivo criado na após a etapa acima e consiste no arquivo central que carrega todos os códigos que foram utilizados na sessão."
+    "objectID": "posts/Sobre_R.html#instalando-o-r-e-o-rstudio-no-linux-mint",
+    "href": "posts/Sobre_R.html#instalando-o-r-e-o-rstudio-no-linux-mint",
+    "title": "Sobre o Programa R",
+    "section": "Instalando o R e o RStudio no Linux Mint",
+    "text": "Instalando o R e o RStudio no Linux Mint\nEssa etapa é um pouco mais complicada, no primeiro passo iremos acessar o site oficial do R em seguida escolhemos a opção “Download R for Linux”, depois selecionamos a opção “ubuntu/” e copiamos a chave do repositório para isso clicamos na opção “full README”, logo iremos copiar o apt-key, no nosso caso copiaremos a chave “E298A3A825C0D65DFD57CBB651716619E084DAB9”, com a chave copiada é só acessar no meno iniciar o aplicativo “Fontes de Aplicativos”, em seguida basta clicar na Chaves de Autenticação e apertar em baixar, dai é só colar a chave copiada e apertar em OK, após isso aceite a atualização do repositório. Precisamos adicionar o repositório Para isso iremos acessar novamente a página do R e vamos copiar o comando\n“deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/”, em seguida Adicionaremos esse repositório no aplicativo Fontes de Aplicativos e em Adicionar apertaremos em OK, logo adicionaremos o seguinte comando: “sudo apt-get install r-base r-base-dev” no terminal (Ctrl + Alt + T) e confirmamos a instalação digitando S e apertando Enter.\n\nPara abrir o R no terminal é só digitar o R maiúsculo e apertar Enter. ]\nPara instalar o RStudio é só acessar o link do RStudio ir na opção downloads e escolher a versão Ubuntu18/Debian 10, após baixado é só instalar normalmente como faria no Windows apertando o botão Instalar Pacotes."
   },
   {
     "objectID": "posts/Package_in_R.html",
@@ -203,24 +91,157 @@
     "text": "O primeiro passo é declarar para o Git quem é você, informando seu nomee e-mail associoado a determinada conta Git, podemos fazer isso pelo simples comando no terminaldo RStudio:\n\ngit config –global user.name 'Seu Nome'\ngit config –global user.email 'Seu E-Mail'\n\nLembre-se que se você for copiar e colar essas linhas de comando no terminal, lembre de utilizar Ctrl + Shift + V para colar e para copiar qualquer coisa no terminal você dever utilizar Ctrl + Shift + c\nPara credenciamento Git, você deve fazer um token antes de realizar os comandos commit e push ou pull no RStudio, para criar um TOKEN no RStudio digite o seguinte comando no console\n\nushethis::create_githubtoken()\n\nAtenção: Clique em “Generate token” e copie o código do token gerado (ao fechar a página não será possível visualizá-lo novamente).\nFeito isso vá novamente para o terminal no RStudio e digite o seguinte comando:\n\ngit add -A\ngit commit -m \"Meu primeiro Commit no meu Pacote\"\n\nO comando “git add -A” seleciona todos os objetos na aba git no RStudio (nesse momento, provavelmente ainda não aparecerá essa aba, já que você ainda não reiniciou o R, na próxima vez que você abrir o repositório irá aparecer essa aba, e nela observamos que quaisquer modificações feita e salva no pacote será mostrada nessa aba, com a função “git add -A” nós iremos selecionar todas essas modificações para posteriormente comentar essas modificações e enviar para o repositório GitHub salvando todas as alterações tanto no computador como na núvem.\nO comando “git commit -m”Meu primeiro commit no meu Pacote” me permite comentar quaisquer mudanças ou alterações feita no meu repositório, perceba que eu posso colocar o que eu quiser entre as aspas.\nApós essa etapa eu devo criar meu repositório na minha conta do GitHub clicando em New, aqui é importante colocar no repositório o mesmo nome do pacote e uma breve descrição do pacote também.\nDepois que o seu repositório GitHub estiver finalizado você deve copiar o código do seu repositório e fornecer esse código para sincronização no RStudio, para isso vá no terminal e adicione o comando\n\ngit remote add origin https://github.com/username/reponame\n\nFeito isso você pode escrever o comando “git push -u origin master” no terminal.\nÉ interessante adicionar é um README arquivo (ou um versão Markdown , README.md). Isso aparecerá bem em seu repositório GitHub, abaixo a lista de arquivos. Esse arquivo é um arquivo Rmarkdown simples onde você pode descrever com detalhes o seu pacote."
   },
   {
-    "objectID": "posts/Sobre_R.html",
-    "href": "posts/Sobre_R.html",
-    "title": "Sobre o Programa R",
+    "objectID": "posts/GitHub.html",
+    "href": "posts/GitHub.html",
+    "title": "GitHub no R: Sincronizando repositórios no RStudio",
     "section": "",
-    "text": "Segundo o site oficial do programa o R é uma linguagem e ambiente para computação com foco em estatística e gráficos, é importante perceber que esse ambiente de programação nada mais é que um projeto GNU semelhante a linguagem e ambiente S desenvolvido pela Bell Laboratories por John Chambers e colegas. Por ser basicamente um projeto GNU, o R é um software livre que pode ser estendido através da utilização de pacotes por meio da família CRAN de sites da internet. O termo ambiente pretende caracterizar o R como um sistema totalmente planejado e coerente e ai está a principal diferença entre esse ambiente com os sofwares de análise de dados, o R permite ao pesquisador certa liberdade na hora da análise de dados, já que tal ambiente de programação acompanha o progresso científico, ou seja: novas abordagens metodológicas são desenvolvidas e disponibilizadas nessa plataforma através da criação de pacotes estatísticos, que são disponibilizados para a comunidade científicas através da página oficial CRAN ou pelo github.\nO programa foi desenvolvido por George Ross Ihaka e Robert Clifford Gentleman em 1991, nesta ocasião, os professores (Ihaka e Gentleman) que trabalhavam na Universidade de Auckland (Nova Zelândia) desenvolveram uma alternativa à linguagem S, na qual foi oficialmente divulgado em 1995. Em 1997, um grupo central responsável pelas atualizações e estabilizações do programa foi criado e chamado de R Development Core Team, no mesmo ano surgiu o CRAN (Comprehensive R Archive Network) que consiste num conjunto de sites (espelhos) que transportam material idêntico com as contribuições do R de uma forma geral.\nA linguagem R é uma linguagem interpretada, isto é, o código fonte nessa linguagem é executado por um programa de computador (interpretador) na qual interpreta linha por linha (e aqui está a diferença entre uma linguagem compilada e uma interpretada, na linguagem compilada o compilador converte todo o código de uma vez para a linguagem binária, por causa disso o processo compilado é muito mais rápido que o traduzido, na qual o processo é repetitivo, pois o interpretador processa o código linha por linha) que em seguida é processado pelo sistema operacional ou processador."
+    "text": "Para distros ubuntu e debian abra o terminal e digite o comando: sudo apt-get install git.\nnas distros fedora ou RedHat digite: sudo yum install git.\n\n\n\nBasta instalar o Git pelo site apertando no download."
   },
   {
-    "objectID": "posts/Sobre_R.html#instalando-o-r-e-rstudio-no-windows",
-    "href": "posts/Sobre_R.html#instalando-o-r-e-rstudio-no-windows",
-    "title": "Sobre o Programa R",
-    "section": "Instalando o R e RStudio no Windows",
-    "text": "Instalando o R e RStudio no Windows\nPodemos instalar o R nesse link e o RStudio nesse respectivamente"
+    "objectID": "posts/GitHub.html#linux",
+    "href": "posts/GitHub.html#linux",
+    "title": "GitHub no R: Sincronizando repositórios no RStudio",
+    "section": "",
+    "text": "Para distros ubuntu e debian abra o terminal e digite o comando: sudo apt-get install git.\nnas distros fedora ou RedHat digite: sudo yum install git."
   },
   {
-    "objectID": "posts/Sobre_R.html#instalando-o-r-e-o-rstudio-no-linux-mint",
-    "href": "posts/Sobre_R.html#instalando-o-r-e-o-rstudio-no-linux-mint",
-    "title": "Sobre o Programa R",
-    "section": "Instalando o R e o RStudio no Linux Mint",
-    "text": "Instalando o R e o RStudio no Linux Mint\nEssa etapa é um pouco mais complicada, no primeiro passo iremos acessar o site oficial do R em seguida escolhemos a opção “Download R for Linux”, depois selecionamos a opção “ubuntu/” e copiamos a chave do repositório para isso clicamos na opção “full README”, logo iremos copiar o apt-key, no nosso caso copiaremos a chave “E298A3A825C0D65DFD57CBB651716619E084DAB9”, com a chave copiada é só acessar no meno iniciar o aplicativo “Fontes de Aplicativos”, em seguida basta clicar na Chaves de Autenticação e apertar em baixar, dai é só colar a chave copiada e apertar em OK, após isso aceite a atualização do repositório. Precisamos adicionar o repositório Para isso iremos acessar novamente a página do R e vamos copiar o comando\n“deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/”, em seguida Adicionaremos esse repositório no aplicativo Fontes de Aplicativos e em Adicionar apertaremos em OK, logo adicionaremos o seguinte comando: “sudo apt-get install r-base r-base-dev” no terminal (Ctrl + Alt + T) e confirmamos a instalação digitando S e apertando Enter.\n\nPara abrir o R no terminal é só digitar o R maiúsculo e apertar Enter. ]\nPara instalar o RStudio é só acessar o link do RStudio ir na opção downloads e escolher a versão Ubuntu18/Debian 10, após baixado é só instalar normalmente como faria no Windows apertando o botão Instalar Pacotes."
+    "objectID": "posts/GitHub.html#windows",
+    "href": "posts/GitHub.html#windows",
+    "title": "GitHub no R: Sincronizando repositórios no RStudio",
+    "section": "",
+    "text": "Basta instalar o Git pelo site apertando no download."
+  },
+  {
+    "objectID": "posts/GitHub.html#no-rstudio",
+    "href": "posts/GitHub.html#no-rstudio",
+    "title": "GitHub no R: Sincronizando repositórios no RStudio",
+    "section": "No RStudio",
+    "text": "No RStudio\nO próximo passo é ir ao RStudio e criar um novo Projeto: File- New Project - Version Control - Git, em seguida iremos colar o código HTTPS copiado do nosso repositório GitHub na parte Repository URL:\nOBS&gt; O nome do nosso repositório aparece automaticamente assim que colamos o código no Git do RStudio, escolhemos o nosso subrepositório (uma pasta que devemos criar onde será estabelecida a sincronização das pastas na memória do computador com o repositório no GitHUb)."
+  },
+  {
+    "objectID": "posts/GitHub.html#rproj",
+    "href": "posts/GitHub.html#rproj",
+    "title": "GitHub no R: Sincronizando repositórios no RStudio",
+    "section": ".Rproj",
+    "text": ".Rproj\nÉ um arquivo criado na após a etapa acima e consiste no arquivo central que carrega todos os códigos que foram utilizados na sessão."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Wesley Neves",
+    "section": "",
+    "text": "“Nada na vida deve ser temido, apenas compreendido. Agora é a hora de compreender mais, para que possamos temer menos.”\n— Marie Skłodowska-Curie"
+  },
+  {
+    "objectID": "index.html#sobre",
+    "href": "index.html#sobre",
+    "title": "Wesley Neves",
+    "section": "Sobre",
+    "text": "Sobre\nSou biólogo com foco em ecologia de comunidades e métodos quantitativos aplicados à biodiversidade marinha. Minha atuação integra modelagem estatística, sensoriamento remoto, visualização de dados e formação de pesquisadores para elevar a qualidade analítica de estudos ecológicos."
+  },
+  {
+    "objectID": "index.html#linhas",
+    "href": "index.html#linhas",
+    "title": "Wesley Neves",
+    "section": "Linhas de pesquisa",
+    "text": "Linhas de pesquisa\n\n\n Ecologia de Comunidades\nEstrutura e dinâmica da biodiversidade em ambientes costeiros e estuarinos, com abordagem funcional, filogenética e taxonômica.\n\n\n Modelagem em R\nGLMs, GAMs, modelos mistos, análise multivariada e séries temporais para inferência ecológica mais robusta.\n\n\n Formação Científica\nTreinamentos práticos para quem deseja sair do “dado bruto” e chegar ao artigo com mais segurança metodológica."
+  },
+  {
+    "objectID": "index.html#projetos",
+    "href": "index.html#projetos",
+    "title": "Wesley Neves",
+    "section": "Projetos em destaque",
+    "text": "Projetos em destaque\n\n\n ### Monitoramento ecológico costeiro Modelagem de diversidade e sazonalidade em gradientes ambientais estuarinos. Ver estudo\n\n\n ### Diversidade funcional de copépodes Integração de traços funcionais e abundância para métricas de redundância ecológica. Ver estudo\n\n\n ### Curso: Do Dado ao Artigo Formação aplicada em organização de dados, análise em R e escrita científica orientada. Saiba mais"
+  },
+  {
+    "objectID": "index.html#contato",
+    "href": "index.html#contato",
+    "title": "Wesley Neves",
+    "section": "Contato",
+    "text": "Contato\n\n wesley.neves@ufpe.br\n github.com/wesneves"
+  },
+  {
+    "objectID": "cursos/index.html",
+    "href": "cursos/index.html",
+    "title": "Cursos Oferecidos",
+    "section": "",
+    "text": "Do Dado ao Artigo\n\n\nAnálise Quantitativa no R: Modelagem, Multivariada e Produção Científica\n\n\n\n\n\n\n\n\n27 de fev. de 2026\n\n\nWesley de Oliveira Neves\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "contato/index.html",
+    "href": "contato/index.html",
+    "title": "Entre em Contato",
+    "section": "",
+    "text": "Nenhum item correspondente"
+  },
+  {
+    "objectID": "cursos/sympla.html",
+    "href": "cursos/sympla.html",
+    "title": "Do Dado ao Artigo",
+    "section": "",
+    "text": "Este treinamento foi desenhado para transformar a sua relação com dados científicos. Vamos superar a barreira do código básico para alcançar uma produção científica robusta, reprodutível e visualmente impecável. Da limpeza dos dados à submissão do artigo, o R será seu maior aliado."
+  },
+  {
+    "objectID": "cursos/sympla.html#roteiro-da-jornada",
+    "href": "cursos/sympla.html#roteiro-da-jornada",
+    "title": "Do Dado ao Artigo",
+    "section": "🗺️ Roteiro da Jornada",
+    "text": "🗺️ Roteiro da Jornada\n\n💻 Módulo 1: Fundamentos & Tidyverse🌿 Módulo 2: Ecologia & Estatística⚙️ Módulo 3: Desenvolvimento📄 Módulo 4: Produção Científica\n\n\n12 horas | O alicerce da manipulação moderna\nNeste módulo, dominamos o fluxo de trabalho profissional, garantindo que você nunca mais se perca em planilhas confusas.\n\nAula 01: O Ecossistema R e RStudio (Instalação e Lógica de Objetos).\nAula 02: Manipulação com dplyr: O poder do Pipe (|&gt;) para filtros, seleções e transformações.\nAula 03: Visualização com ggplot2: A gramática dos gráficos para publicações de alto impacto.\n\n\n\n12 horas | Onde a teoria encontra o código\nAplicamos ferramentas estatísticas e ecológicas em dados reais, focando na interpretação biológica dos resultados.\n\nAula 04: Modelagem Estatística: De testes clássicos (ANOVA/t) aos Modelos Lineares Generalizados (GLM).\nAula 05: Ecologia de Comunidades I: Diversidade, Riqueza e o indispensável pacote vegan.\nAula 06: Ecologia de Comunidades II: Análises Multivariadas (PCA, nMDS e PERMANOVA).\n\n\n\n8 horas | De usuário a desenvolvedor\nAutomatize tarefas repetitivas e aprenda a organizar seu próprio fluxo de ferramentas.\n\nAula 07: Programação Funcional: Automatização com a família apply e o pacote purrr.\nAula 08: Engenharia de Funções e Pacotes: Como criar suas próprias ferramentas e documentá-las.\n\n\n\n8 horas | A apresentação final da ciência\nO toque final: transformar códigos em documentos profissionais e relatórios dinâmicos.\n\nAula 09: Comunicação com RMarkdown e LaTeX: Inserção de equações e controle de chunks.\nAula 10: Customização Web e Projeto Final: CSS personalizado e a entrega do seu relatório integrativo."
+  },
+  {
+    "objectID": "cursos/sympla.html#informações-práticas",
+    "href": "cursos/sympla.html#informações-práticas",
+    "title": "Do Dado ao Artigo",
+    "section": "📌 Informações Práticas",
+    "text": "📌 Informações Práticas\n\n📅 Início: 28/02/2026 , às 08:00h.\n⏳ Carga Horária: 40 horas com emissão de certificado.\n🎥 Formato: Aulas ao vivo com suporte prático.\n\nAcessar Evento Sympla"
+  },
+  {
+    "objectID": "cursos/sympla.html#área-exclusiva-do-aluno",
+    "href": "cursos/sympla.html#área-exclusiva-do-aluno",
+    "title": "Do Dado ao Artigo",
+    "section": "🔐 Área Exclusiva do Aluno",
+    "text": "🔐 Área Exclusiva do Aluno\n\n\n\n\n\n\nAvisoClique para expandir: Materiais e Scripts das Aulas\n\n\n\n\n\nPara garantir a integridade dos scripts desenvolvidos em aula, os arquivos abaixo estão compactados e protegidos por senha.\nA senha foi disponibilizada no chat da sala virtual e no e-mail de boas-vindas do Sympla.\n\n\n\nConteúdo\nLink de Acesso\nFormato\n\n\n\n\nScript e Conteúdo - Aula 1\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 2\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 3\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 4\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 5\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 6\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 7\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 8\nAcessar Pasta\n.ZIP (Protegido)\n\n\n\nProblemas com o acesso? Entre em contato pelo chat do Sympla."
+  },
+  {
+    "objectID": "livros/index.html",
+    "href": "livros/index.html",
+    "title": "Livros",
+    "section": "",
+    "text": "Nenhum item correspondente"
+  },
+  {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Blog & Dicas de R",
+    "section": "",
+    "text": "Faça seu pacote no RStudio do Zero\n\n\n\nR\n\n\n\n\n\n\n\n\n\n11 de ago. de 2023\n\n\nWesley Neves\n\n\n\n\n\n\n\n\n\n\n\n\nToken do GitHub para o RStudio\n\n\n\nGitHub\n\n\n\n\n\n\n\n\n\n4 de fev. de 2022\n\n\nWesley Neves\n\n\n\n\n\n\n\n\n\n\n\n\nGitHub no R: Sincronizando repositórios no RStudio\n\n\n\nGitHub\n\n\n\n\n\n\n\n\n\n17 de jan. de 2022\n\n\nWesley Neves\n\n\n\n\n\n\n\n\n\n\n\n\nRmarkdown\n\n\n\nR\n\n\n\n\n\n\n\n\n\n17 de jan. de 2022\n\n\nWesley Neves\n\n\n\n\n\n\n\n\n\n\n\n\nSobre o Programa R\n\n\n\nR\n\n\n\n\n\n\n\n\n\n12 de jan. de 2022\n\n\nWesley Neves\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "posts/rmakdown.html",
+    "href": "posts/rmakdown.html",
+    "title": "Rmarkdown",
+    "section": "",
+    "text": "Inicialmente é necessário baixar o pacote rmarkdown no RStudio, em seguida podemos criar um novo arquivo rmarkdown em file - new file - R Markdown.\nPara facilitar a aprendizagem dessa sintaxe de formatação da escrita nós podemos utilizar o botão Switch to sourve editor (um botão que parece um compasso que se localiza abaixo do botão de maximizar da janela onde o arquivo rmarkdown será aberto).\nCom essa função ativa, o autor não precisará gravar linhas de comandos para adicionar, títulos, tópicos, letras em negrito, adicionar código, imagens, links, citações etc. Todas essas funcionalidades ficam disponíveis no painel da aba rmakdown.\nApós escrever os comandos necessário para o nosso relatório, basta visualizar o relatório no formato desejado, que no nosso caso seria o HTML, para tal, será necessário antes salvar o arquivo e só então apertar o botão knit para visualizar o resultado através da aba viwer no quadrante onde ficam os pacotes e arquivos do RStudio.\nUm conselho seria consultar todas as funcionalidades disponibilizadas no cabeçalho da aba e gravar os atalhos no teclado para agilizar nossa escrita."
+  },
+  {
+    "objectID": "posts/rmakdown.html#documento-gerado-automaticamente-após-criar-um-arquivo-r-markdown-no-rstudio",
+    "href": "posts/rmakdown.html#documento-gerado-automaticamente-após-criar-um-arquivo-r-markdown-no-rstudio",
+    "title": "Rmarkdown",
+    "section": "Documento gerado automaticamente após criar um arquivo R markdown no RStudio",
+    "text": "Documento gerado automaticamente após criar um arquivo R markdown no RStudio\nMarkdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.\nWhen you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:\n\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00"
+  },
+  {
+    "objectID": "posts/rmakdown.html#including-plots",
+    "href": "posts/rmakdown.html#including-plots",
+    "title": "Rmarkdown",
+    "section": "Including Plots",
+    "text": "Including Plots\nYou can also embed plots, for example:\n\n\n\n\n\n\n\n\n\nNote that the echo = FALSE parameter was added to the code chunk to prevent printing of the R code that generated the plot."
+  },
+  {
+    "objectID": "posts/Token.html",
+    "href": "posts/Token.html",
+    "title": "Token do GitHub para o RStudio",
+    "section": "",
+    "text": "O que é e para que preciso do TOKEN?\nPrecisamos criar um token, pois quando interagimos com um servidor Git remoto (como o GitHub, por exemplo) é necessário incluir credenciais na solicitação, isso acontece na hora que em que estamos utilizando o RStudio e precisamos sincronizar/enviar as alterações feitas no RStudio para o GitHub, para isso será necessário utilizar o comando commit e o comando push na aba git do RStudio. Tal credenciamento prova que somos um usuário específico do GitHub que tem permissão para fazer o que estivermos pedindo, já que quaisquer alterações realizadas no nosso repositório é mostrado no GitHub pela credencial do usuário.\nA senha que nós utilizamos para fazer login no site do GitHub NÃO é uma credencial aceitável ao conversar com o GitHub como um servidor Git, graças a uma atulização de segurança na plataforma. Por isso é necessário a criação de um TOKEN para realizar a sincronização entre o RStudio e o GitHub.\n\n\nCriando o TOKEN no RStudio\n\nDefinir seu nome de usuário GitHub e o seu email vinculado\n\nusethis :: use_git_config( user.name  =  \" SeuNome \" , user.email  =  \" seu@email.com \" )\n\nPacotes necessários para criar o Token:\n\ninstall.packages(c(\"gh\", \"usethis\", \"gitcreds\", \"credentials\"))\n\nCrie um token de acesso pessoal para a autenticação\n\nusethis::create_github_token()\n\nEssa linha de comando configura o seu token abrindo uma janela no navegador onde irá pedir a confirmação da senha no GitHub, após executar esse comando devemos copiar o token gerado, para tal faz-se necessário estabelecer um prazo de validade para o token e algumas permissões adicionais.\n\n\nDefina seu token no RStudio com o pacote credentials:\n\n``\ncredentials::set_github_pat(\"seuTOKEN\")\n\nReinicie o R!\nVerifique as Configurações:\n\nusethis :: git_sitrep()\nCom esse comando iremos notar algumas informações sobre nosso perfil, além disso o relatório feito deve conter alguma informação sobre o token de acesso pessoal.\nPara verificarmos o nosso TOKEN é necessário utilizar o comando: gh::gh_whoami()\nO seguinte comando revela o nosso token: gitcreds::gitcreds_get()$password"
   }
 ]

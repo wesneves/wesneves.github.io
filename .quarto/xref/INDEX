@@ -49,5 +49,23 @@
   },
   "posts/Token.qmd": {
     "Token.html": "81964140"
+  },
+  "cursos/curso.qmd": {
+    "curso.html": "2649eb22"
+  },
+  "sobre/about.qmd": {
+    "about.html": "2f9c3dcd"
+  },
+  "contato/index.qmd": {
+    "index.html": "36d0d829"
+  },
+  "cursos/index.qmd": {
+    "index.html": "8e1786ac"
+  },
+  "cursos/sympla.qmd": {
+    "sympla.html": "b491eb87"
+  },
+  "livros/index.qmd": {
+    "index.html": "501ce788"
   }
 }

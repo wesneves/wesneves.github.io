@@ -1,0 +1,8 @@
+---
+title: "Cursos Oferecidos"
+listing:
+  contents: "."
+  type: default
+  categories: true
+  sort: "date desc"
+---

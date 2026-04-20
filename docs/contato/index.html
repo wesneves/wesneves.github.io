@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Wesley Neves">
 
-<title>Sobre o Programa R – Wesley Neves</title>
+<title>Entre em Contato – Wesley Neves</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -34,6 +33,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -71,12 +72,70 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Procurar"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -110,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">🪪 Livros</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../contato/index.html"> 
+    <a class="nav-link active" href="../contato/index.html" aria-current="page"> 
 <span class="menu-text">📲 Contato</span></a>
   </li>  
 </ul>
@@ -124,35 +183,21 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tudo <span class="quarto-category-count">(0)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Sobre o Programa R</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">R</div>
-  </div>
-  </div>
+<h1 class="title">Entre em Contato</h1>
+</div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor</div>
-    <div class="quarto-title-meta-contents">
-             <p>Wesley Neves </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Data de Publicação</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">12 de janeiro de 2022</p>
-    </div>
-  </div>
   
     
   </div>
@@ -162,38 +207,16 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="o-que-é-o-programa-r" class="level1">
-<h1>O que é o programa R?</h1>
-<p>Segundo o <a href="https://www.r-project.org/about.html">site</a> oficial do programa o R é uma linguagem e ambiente para computação com foco em estatística e gráficos, é importante perceber que esse ambiente de programação nada mais é que um projeto GNU semelhante a linguagem e ambiente S desenvolvido pela <em>Bell Laboratories</em> por John Chambers e colegas. Por ser basicamente um projeto GNU, o R é um software livre que pode ser estendido através da utilização de pacotes por meio da família CRAN de sites da internet. O termo ambiente pretende caracterizar o R como um sistema totalmente planejado e coerente e ai está a principal diferença entre esse ambiente com os sofwares de análise de dados, o R permite ao pesquisador certa liberdade na hora da análise de dados, já que tal ambiente de programação acompanha o progresso científico, ou seja: novas abordagens metodológicas são desenvolvidas e disponibilizadas nessa plataforma através da criação de pacotes estatísticos, que são disponibilizados para a comunidade científicas através da página oficial CRAN ou pelo github.</p>
-<p>O programa foi desenvolvido por George Ross Ihaka e Robert Clifford Gentleman em 1991, nesta ocasião, os professores (Ihaka e Gentleman) que trabalhavam na Universidade de Auckland (Nova Zelândia) desenvolveram uma alternativa à linguagem S, na qual foi oficialmente divulgado em 1995. Em 1997, um grupo central responsável pelas atualizações e estabilizações do programa foi criado e chamado de R Development Core Team, no mesmo ano surgiu o CRAN (Comprehensive R Archive Network) que consiste num conjunto de sites (espelhos) que transportam material idêntico com as contribuições do R de uma forma geral.</p>
-<p>A linguagem R é uma linguagem <strong>interpretada</strong>, isto é, o código fonte nessa linguagem é executado por um programa de computador (interpretador) na qual interpreta linha por linha (e aqui está a diferença entre uma linguagem compilada e uma interpretada, na linguagem compilada o compilador converte todo o código de uma vez para a linguagem binária, por causa disso o processo compilado é muito mais rápido que o traduzido, na qual o processo é repetitivo, pois o interpretador processa o código linha por linha) que em seguida é processado pelo sistema operacional ou processador.</p>
-</section>
-<section id="o-que-é-o-rstudio" class="level1">
-<h1>O que é o RSTudio?</h1>
-<p>Basicamente o RStudio (Figura 1) é uma interface gráfica criado por Joseph J. Allaire. Essa interface deixou o R mais popular, já que o RStudio facilita a utilização de vários recursos por meio de botões e uma interface parecida com os programas usuais utilizados por vários sistemas operacionais.</p>
-<p><img src="..\blog/GitHub_files/RStudio.png" title="RStudio" class="img-fluid"></p>
-<p>Digamos que o RStudio é mais amigável com o estudante que está aprendendo essa nova linguagem. Uma das vantagens dessa interface é a disposição de quadrantes que organizam as atividades dentro dessa plataforma. Podemos configurar a aparência e a ordem dos quadrantes no RStudio em: <em>Tools &gt; Global Options &gt; Appearance e em Pane Layout</em>.</p>
-</section>
-<section id="instalando-o-r-e-o-rstudio" class="level1">
-<h1>Instalando o R e o RStudio:</h1>
-<p>Como mencionamos anteriormente, uma das vantagens do “programa R” é sua compatibilidade com vários sistemas Operacionais, portanto, vamos mostrar como podemos instalar esse sistema tanto no Windows como no Linux Mint (Uma das distros mais utilizadas do Linux e foi baseada no Ubuntu, portanto essas duas distros possuem ampla compatibilidade entre si).</p>
-<section id="instalando-o-r-e-rstudio-no-windows" class="level2">
-<h2 class="anchored" data-anchor-id="instalando-o-r-e-rstudio-no-windows">Instalando o R e RStudio no Windows</h2>
-<p>Podemos instalar o R nesse <a href="https://cran.r-project.org/bin/windows/base/">link</a> e o RStudio <a href="https://rstudio.com/products/rstudio/download/#download">nesse</a> respectivamente</p>
-</section>
-<section id="instalando-o-r-e-o-rstudio-no-linux-mint" class="level2">
-<h2 class="anchored" data-anchor-id="instalando-o-r-e-o-rstudio-no-linux-mint">Instalando o R e o RStudio no Linux Mint</h2>
-<p>Essa etapa é um pouco mais complicada, no primeiro passo iremos acessar o site oficial do <a href="https://cran.r-project.org/">R</a> em seguida escolhemos a opção <em>“Download R for Linux”</em>, depois selecionamos a opção <em>“ubuntu/”</em> e copiamos a chave do repositório para isso clicamos na opção “full README”, logo iremos copiar o apt-key, no nosso caso copiaremos a chave <strong>“E298A3A825C0D65DFD57CBB651716619E084DAB9”</strong>, com a chave copiada é só acessar no meno iniciar o aplicativo <em>“Fontes de Aplicativos”</em>, em seguida basta clicar na <strong>Chaves de Autenticação</strong> e apertar em baixar, dai é só colar a chave copiada e apertar em OK, após isso aceite a atualização do repositório. Precisamos adicionar o repositório Para isso iremos acessar novamente a página do R e vamos copiar o comando<br>
-“deb <a href="https://cloud.r-project.org/bin/linux/ubuntu" class="uri">https://cloud.r-project.org/bin/linux/ubuntu</a> focal-cran40/”, em seguida Adicionaremos esse repositório no aplicativo <strong>Fontes de Aplicativos</strong> e em Adicionar apertaremos em OK, logo adicionaremos o seguinte comando: <em>“sudo apt-get install r-base r-base-dev”</em> no terminal (Ctrl + Alt + T) e confirmamos a instalação digitando S e apertando Enter.</p>
-<p><img src="..\blog/GitHub_files/FontesApp.png" class="img-fluid"></p>
-<p>Para abrir o R no terminal é só digitar o R maiúsculo e apertar Enter. ]</p>
-<p>Para instalar o RStudio é só acessar o link do <a href="https://rstudio.com/">RStudio</a> ir na opção downloads e escolher a versão Ubuntu18/Debian 10, após baixado é só instalar normalmente como faria no Windows apertando o botão Instalar Pacotes.</p>
 
 
-</section>
-</section>
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+
+</div>
+<div class="listing-no-matching d-none">Nenhum item correspondente</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

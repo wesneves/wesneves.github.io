@@ -7,33 +7,33 @@ Tem alguma dúvida sobre o curso **Do Dado ao Artigo**, o livro **Universo R** o
 
 ```{=html}
 <div class="contact-card">
-  <form action="[https://formspree.io/f/xvzdbkdg](https://formspree.io/f/xvzdbkdg)" method="POST">
-    
-    <div class="form-group">
-      <label for="name">Nome Completo</label>
-      <input type="text" name="name" id="name" required>
-    </div>
+  <form action="https://formspree.io/f/xvzdbkdg" method="POST">
+  
+  <div class="form-group">
+    <label for="name">Nome Completo</label>
+    <input type="text" name="name" id="name" required>
+  </div>
 
-    <div class="form-group">
-      <label for="email">E-mail</label>
-      <input type="email" name="_replyto" id="email" required>
-    </div>
+  <div class="form-group">
+    <label for="email">E-mail</label>
+    <input type="email" name="_replyto" id="email" required>
+  </div>
 
-    <div class="form-group">
-      <label for="subject">Assunto</label>
-      <input type="text" name="subject" id="subject" required>
-    </div>
+  <div class="form-group">
+    <label for="subject">Assunto</label>
+    <input type="text" name="subject" id="subject" required>
+  </div>
 
-    <div class="form-group">
-      <label for="message">Mensagem</label>
-      <textarea name="message" id="message" rows="5" required></textarea>
-    </div>
+  <div class="form-group">
+    <label for="message">Mensagem</label>
+    <textarea name="message" id="message" rows="5" required></textarea>
+  </div>
 
-    <button type="submit" class="btn-submit-elegant">
-      Enviar Mensagem
-    </button>
-    
-    <input type="hidden" name="_next" value="/contato/obrigado.html">
-  </form>
+  <button type="submit" class="btn-submit-elegant">
+    Enviar Mensagem
+  </button>
+  
+  <input type="hidden" name="_next" value="/contato/obrigado.html">
+</form>
 </div>
 ``` 

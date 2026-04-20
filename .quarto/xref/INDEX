@@ -67,5 +67,14 @@
   },
   "livros/index.qmd": {
     "index.html": "501ce788"
+  },
+  "sympla.qmd": {
+    "sympla.html": "6afa3da9"
+  },
+  "universo_r.qmd": {
+    "universo_r.html": "1233da70"
+  },
+  "livros/universo_r.qmd": {
+    "universo_r.html": "772d6378"
   }
 }

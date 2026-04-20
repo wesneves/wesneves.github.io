@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Wesley Neves">
+<meta name="author" content="Wesley de Oliveira Neves">
 
-<title>Token do GitHub para o RStudio – Wesley Neves</title>
+<title>Universo R – Wesley Neves</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -130,11 +130,9 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Token do GitHub para o RStudio</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">GitHub</div>
-  </div>
-  </div>
+<h1 class="title">Universo R</h1>
+<p class="subtitle lead">Um guia completo de análise, modelagem e produção científica</p>
+</div>
 
 
 
@@ -143,14 +141,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Autor</div>
     <div class="quarto-title-meta-contents">
-             <p>Wesley Neves </p>
+             <p>Wesley de Oliveira Neves </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">4 de fevereiro de 2022</p>
+      <p class="date">20 de abril de 2026</p>
     </div>
   </div>
   
@@ -162,41 +160,55 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="o-que-é-e-para-que-preciso-do-token" class="level1">
-<h1>O que é e para que preciso do TOKEN?</h1>
-<p>Precisamos criar um token, pois quando interagimos com um servidor Git remoto (como o GitHub, por exemplo) é necessário incluir credenciais na solicitação, isso acontece na hora que em que estamos utilizando o RStudio e precisamos sincronizar/enviar as alterações feitas no RStudio para o GitHub, para isso será necessário utilizar o comando <strong>commit</strong> e o comando <strong>push</strong> na aba <strong>git</strong> do RStudio. Tal credenciamento prova que somos um usuário específico do GitHub que tem permissão para fazer o que estivermos pedindo, já que quaisquer alterações realizadas no nosso repositório é mostrado no GitHub pela credencial do usuário.</p>
-<p>A senha que nós utilizamos para fazer login no site do GitHub <em>NÃO</em> é uma credencial aceitável ao conversar com o GitHub como um servidor Git, graças a uma atulização de segurança na plataforma. Por isso é necessário a criação de um TOKEN para realizar a sincronização entre o RStudio e o GitHub.</p>
+<section id="bem-vindo-ao-meu-primeiro-livro" class="level3 welcome-box">
+<h3 class="anchored" data-anchor-id="bem-vindo-ao-meu-primeiro-livro">👋 Bem vindo ao meu primeiro livro</h3>
+<p>Este livro foi pensado para transformar a sua relação com os dados científicos, ele é uma extensão completa do curso DoDadoAoArtigo. A metáfora do Universo que utilizei é para lembrar que a análise de dados não deve ser uma sequência de acidentes manuais, mas um ecossistema governado por leis claras, onde o código é a lei e a reprodutibilidade é a gravidade que mantém tudo unido, coisa que só conseguimos ao utilizar a linguagem R (ou outras linguagens que possuam a mesma amplitude do R).</p>
 </section>
-<section id="criando-o-token-no-rstudio" class="level1">
-<h1>Criando o TOKEN no RStudio</h1>
+<section id="estruturação-do-livro" class="level2">
+<h2 class="anchored" data-anchor-id="estruturação-do-livro">Estruturação do livro</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Parte 1: O Big Bang (A Transição)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Parte 2: As Leis da Natureza (Estatística e Visualização)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Parte 3: Mapeando o Espaço (Geoespacial)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Parte 4: Radiação de Fundo (Produção Textual e Web)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">Parte 5: Criando Novas Galáxias (Desenvolvimento)</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>O objetivo dessa sessão é entender as vantagens em utilizar o R em relação ao método tradicional e ir migrando aos poucos, vamos abordar questões sobre linguagens de programação, funcionamento R, curadoria de dados, tipagem tidyverse</p>
 <ul>
-<li>Definir seu nome de usuário GitHub e o seu email vinculado</li>
+<li><strong>01</strong> O Caos dos Softwares Fragmentados</li>
+<li><strong>02</strong> Habitando o Universo R</li>
+<li><strong>03</strong> Adeus, Planilhas!</li>
 </ul>
-<p><code>usethis :: use_git_config( user.name  =  " SeuNome " , user.email  =  " seu@email.com " )</code></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Nessa sessão abordamos a gramática dos gráficos, os princípios da metodologia científica e do pensamento científico e finalizamos o capítulo falando um pouco sobre ecologia de comunidades no R.</p>
 <ul>
-<li>Pacotes necessários para criar o Token:</li>
+<li><strong>04</strong> A Gramática dos Gráficos</li>
+<li><strong>05</strong> O Motor Estatístico e Científico</li>
+<li><strong>06</strong> Ecologia Quantitativa no R</li>
 </ul>
-<p><code>install.packages(c("gh", "usethis", "gitcreds", "credentials"))</code></p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>Sessão destinada ao sensoriamento remoto e criação de mapas e gráficos estilizados.</p>
 <ul>
-<li>Crie um token de acesso pessoal para a autenticação</li>
+<li><strong>07</strong> O R como SIG</li>
+<li><strong>08</strong> Visualização de Resultados Espaciais</li>
 </ul>
-<p><code>usethis::create_github_token()</code></p>
-<blockquote class="blockquote">
-<p>Essa linha de comando configura o seu token abrindo uma janela no navegador onde irá pedir a confirmação da senha no GitHub, após executar esse comando devemos copiar o token gerado, para tal faz-se necessário estabelecer um prazo de validade para o token e algumas permissões adicionais.</p>
-</blockquote>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<p>Nessa sessão iremos conseguir a liberdade dos produtores textuais inflexívos como os do pacote office e aprender a como apresentar os resultados de maneira satisfatória, seja escrevendo slides no R ou criando sites interativos e profissionais.</p>
 <ul>
-<li>Defina seu token no RStudio com o pacote credentials:</li>
+<li><strong>09</strong> Produção Textual no RStudio</li>
+<li><strong>10</strong> Comunicação e Apresentação de Resultados no R</li>
+<li><strong>11</strong> Sua Janela para o Mundo (Websites)</li>
 </ul>
-<p>``</p>
-<p><code>credentials::set_github_pat("seuTOKEN")</code></p>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<p>Por fim, finalizamos o livro abordando questões de desenvolvimento de pacotes e escritas de funções</p>
 <ul>
-<li><p>Reinicie o R!</p></li>
-<li><p>Verifique as Configurações:</p></li>
+<li><strong>12</strong> Do Script à Função</li>
+<li><strong>13</strong> Criando seu Primeiro Pacote</li>
 </ul>
-<p><code>usethis :: git_sitrep()</code></p>
-<p>Com esse comando iremos notar algumas informações sobre nosso perfil, além disso o relatório feito deve conter alguma informação sobre o token de acesso pessoal.</p>
-<p>Para verificarmos o nosso TOKEN é necessário utilizar o comando: <code>gh::gh_whoami()</code></p>
-<p>O seguinte comando revela o nosso token: <code>gitcreds::gitcreds_get()$password</code></p>
+</div>
+</div>
+</div>
 
 
 </section>

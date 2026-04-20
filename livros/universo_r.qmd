@@ -1,0 +1,57 @@
+---
+title: "Universo R"
+subtitle: "Um guia completo de análise, modelagem e produção científica"
+author: "Wesley de Oliveira Neves"
+date: "2026-04-20"
+image: Imagens/capa_uni_r.jpg
+---
+
+::: {.welcome-box}
+### 👋 Bem vindo ao meu primeiro livro
+Este livro foi pensado para transformar a sua relação com os dados científicos, ele é uma extensão completa do curso DoDadoAoArtigo. A metáfora do Universo que utilizei é para lembrar que a análise de dados não deve ser uma sequência de acidentes manuais, mas um ecossistema governado por leis claras, onde o código é a lei e a reprodutibilidade é a gravidade que mantém tudo unido, coisa que só conseguimos ao utilizar a linguagem R (ou outras linguagens que possuam a mesma amplitude do R).
+:::
+
+## Estruturação do livro
+
+::: {.panel-tabset}
+
+### Parte 1: O Big Bang (A Transição)
+
+O objetivo dessa sessão é entender as vantagens em utilizar o R em relação ao método tradicional e ir migrando aos poucos, vamos abordar questões sobre linguagens de programação, funcionamento R, curadoria de dados, tipagem tidyverse
+
+* **01** O Caos dos Softwares Fragmentados
+* **02** Habitando o Universo R
+* **03** Adeus, Planilhas!
+
+### Parte 2: As Leis da Natureza (Estatística e Visualização)
+
+Nessa sessão abordamos a gramática dos gráficos, os princípios da metodologia científica e do pensamento científico e finalizamos o capítulo falando um pouco sobre ecologia de comunidades no R.
+
+* **04** A Gramática dos Gráficos
+* **05** O Motor Estatístico e Científico
+* **06** Ecologia Quantitativa no R
+
+### Parte 3: Mapeando o Espaço (Geoespacial)
+
+Sessão destinada ao sensoriamento remoto e criação de mapas e gráficos estilizados.
+
+* **07** O R como SIG
+* **08** Visualização de Resultados Espaciais
+
+### Parte 4: Radiação de Fundo (Produção Textual e Web)
+
+Nessa sessão iremos conseguir a liberdade dos produtores textuais inflexívos como os do pacote office e aprender a como apresentar os resultados de maneira satisfatória, seja escrevendo slides no R ou criando sites interativos e profissionais.
+
+* **09** Produção Textual no RStudio
+* **10** Comunicação e Apresentação de Resultados no R
+* **11** Sua Janela para o Mundo (Websites) 
+
+### Parte 5: Criando Novas Galáxias (Desenvolvimento)
+
+Por fim, finalizamos o livro abordando questões de desenvolvimento de pacotes e escritas de funções
+
+* **12** Do Script à Função
+* **13** Criando seu Primeiro Pacote
+
+:::
+

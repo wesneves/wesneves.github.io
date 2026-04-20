@@ -4,22 +4,21 @@ project:
 
 website:
   title: "Wesley Neves"
-  description: "Oceanógrafo | Ecologia Marinha | Data Science"
   
   navbar:
     background: white
     search: true
     left:
       - href: sobre/about.qmd
-        text: "🪪 Sobre"
+        text: Sobre
       - href: posts/index.qmd
-        text: "📝 Blog/Dicas"
+        text: Blog/Dicas
       - href: cursos/index.qmd
-        text: "🎓  Cursos"
+        text: Cursos
       - href: livros/index.qmd
-        text: "🪪 Livros"         
+        text: Livros         
       - href: contato/index.qmd
-        text: "📲 Contato" 
+        text: Contato
       
 
 format:

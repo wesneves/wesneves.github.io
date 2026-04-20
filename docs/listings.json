@@ -1,17 +1,15 @@
 [
   {
+    "listing": "/livros/index.html",
+    "items": [
+      "/livros/universo_r.html"
+    ]
+  },
+  {
     "listing": "/cursos/index.html",
     "items": [
       "/cursos/sympla.html"
     ]
-  },
-  {
-    "listing": "/contato/index.html",
-    "items": []
-  },
-  {
-    "listing": "/livros/index.html",
-    "items": []
   },
   {
     "listing": "/posts/index.html",

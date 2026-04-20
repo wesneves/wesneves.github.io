@@ -82,9 +82,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -154,23 +154,23 @@ window.Quarto = {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../sobre/about.html"> 
-<span class="menu-text">🪪 Sobre</span></a>
+<span class="menu-text">Sobre</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../posts/index.html"> 
-<span class="menu-text">📝 Blog/Dicas</span></a>
+<span class="menu-text">Blog/Dicas</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../cursos/index.html"> 
-<span class="menu-text">🎓 Cursos</span></a>
+<span class="menu-text">Cursos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="../livros/index.html" aria-current="page"> 
-<span class="menu-text">🪪 Livros</span></a>
+<span class="menu-text">Livros</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../contato/index.html"> 
-<span class="menu-text">📲 Contato</span></a>
+<span class="menu-text">Contato</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -184,7 +184,7 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tudo <span class="quarto-category-count">(0)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tudo <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -207,13 +207,29 @@ window.Quarto = {
 </header>
 
 
+<p>Explore nossos nossos livros</p>
 
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1776654000000" data-listing-file-modified-sort="1776715061858" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="321">
+<a href="../livros/universo_r.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../livros/Imagens/capa_uni_r.jpg" class="thumbnail-image card-img" style="height: 250px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Universo R
+</h5>
+<div class="card-text listing-description delink">
+Este livro foi pensado para transformar a sua relação com os dados científicos, ele é uma extensão completa do curso DoDadoAoArtigo. A metáfora do Universo que utilizei é…
+</div>
+</div>
+</div></a>
+</div>
 </div>
 <div class="listing-no-matching d-none">Nenhum item correspondente</div>
 </div></main> <!-- /main -->

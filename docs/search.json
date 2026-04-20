@@ -2,23 +2,16 @@
   {
     "objectID": "sobre/about.html",
     "href": "sobre/about.html",
-    "title": "Sobre",
+    "title": "Wesley Neves",
     "section": "",
-    "text": "Dedicado à compreensão da biodiversidade marinha através de lentes quantitativas. Especialista em ecologia de comunidades marinhas e modelagem estatística, atuo na interseção entre a oceanografia biológica e a ciência de dados, desenvolvendo soluções analíticas em R para problemas ecológicos complexos."
+    "text": "Biólogo • PhD Student • R Developer\n\n \n\n\n\n\n\nDedicado à compreensão da biodiversidade marinha através de lentes quantitativas. Especialista em ecologia de comunidades e modelagem estatística, atuo na interseção entre a oceanografia biológica e a ciência de dados.\nComo instrutor de Data Science, foco na democratização de ferramentas computacionais para pesquisadores através do projeto Universo R e do curso Do Dado ao Artigo.\n\n\nDoutorado em Oceanografia (Em andamento)\nUniversidade Federal de Pernambuco Foco em tipos funcionais de ecossistemas marinhos (MEFT’s) e séries temporais.\nMestrado em Biologia Animal Universidade Federal de Pernambuco Foco sobre o morfodinamismo de praias arenosas e o macrobentos que vivem nesses ambientes.\nGraduação em Ciências Biológicas com Ênfase em Ciências Ambientais Universidade Federal de Pernambuco"
   },
   {
-    "objectID": "sobre/about.html#formação-acadêmica",
-    "href": "sobre/about.html#formação-acadêmica",
-    "title": "Sobre",
-    "section": "Formação Acadêmica",
-    "text": "Formação Acadêmica\n\nDoutorado em Oceanografia (Em andamento) | Universidade Federal de Pernambuco\nMestrado em Biologia Animal| Universidade Federal de Pernambuco\nGraduação em Ciências Biológicas| Universidade Federal de Pernambuco"
-  },
-  {
-    "objectID": "sobre/about.html#experiência-com-ensino",
-    "href": "sobre/about.html#experiência-com-ensino",
-    "title": "Sobre",
-    "section": "Experiência com Ensino",
-    "text": "Experiência com Ensino\nComo instrutor de Data Science, foco na democratização de ferramentas computacionais para pesquisadores, ministrando cursos de R aplicados à análise de dados biológicos."
+    "objectID": "sobre/about.html#biografia",
+    "href": "sobre/about.html#biografia",
+    "title": "Wesley Neves",
+    "section": "",
+    "text": "Dedicado à compreensão da biodiversidade marinha através de lentes quantitativas. Especialista em ecologia de comunidades e modelagem estatística, atuo na interseção entre a oceanografia biológica e a ciência de dados.\nComo instrutor de Data Science, foco na democratização de ferramentas computacionais para pesquisadores através do projeto Universo R e do curso Do Dado ao Artigo.\n\n\nDoutorado em Oceanografia (Em andamento)\nUniversidade Federal de Pernambuco Foco em tipos funcionais de ecossistemas marinhos (MEFT’s) e séries temporais.\nMestrado em Biologia Animal Universidade Federal de Pernambuco Foco sobre o morfodinamismo de praias arenosas e o macrobentos que vivem nesses ambientes.\nGraduação em Ciências Biológicas com Ênfase em Ciências Ambientais Universidade Federal de Pernambuco"
   },
   {
     "objectID": "posts/Sobre_R.html",
@@ -126,53 +119,11 @@
     "text": ".Rproj\nÉ um arquivo criado na após a etapa acima e consiste no arquivo central que carrega todos os códigos que foram utilizados na sessão."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Wesley Neves",
+    "objectID": "livros/index.html",
+    "href": "livros/index.html",
+    "title": "Livros",
     "section": "",
-    "text": "“Nada na vida deve ser temido, apenas compreendido. Agora é a hora de compreender mais, para que possamos temer menos.”\n— Marie Skłodowska-Curie"
-  },
-  {
-    "objectID": "index.html#sobre",
-    "href": "index.html#sobre",
-    "title": "Wesley Neves",
-    "section": "Sobre",
-    "text": "Sobre\nSou biólogo com foco em ecologia de comunidades e métodos quantitativos aplicados à biodiversidade marinha. Minha atuação integra modelagem estatística, sensoriamento remoto, visualização de dados e formação de pesquisadores para elevar a qualidade analítica de estudos ecológicos."
-  },
-  {
-    "objectID": "index.html#linhas",
-    "href": "index.html#linhas",
-    "title": "Wesley Neves",
-    "section": "Linhas de pesquisa",
-    "text": "Linhas de pesquisa\n\n\n Ecologia de Comunidades\nEstrutura e dinâmica da biodiversidade em ambientes costeiros e estuarinos, com abordagem funcional, filogenética e taxonômica.\n\n\n Modelagem em R\nGLMs, GAMs, modelos mistos, análise multivariada e séries temporais para inferência ecológica mais robusta.\n\n\n Formação Científica\nTreinamentos práticos para quem deseja sair do “dado bruto” e chegar ao artigo com mais segurança metodológica."
-  },
-  {
-    "objectID": "index.html#projetos",
-    "href": "index.html#projetos",
-    "title": "Wesley Neves",
-    "section": "Projetos em destaque",
-    "text": "Projetos em destaque\n\n\n ### Monitoramento ecológico costeiro Modelagem de diversidade e sazonalidade em gradientes ambientais estuarinos. Ver estudo\n\n\n ### Diversidade funcional de copépodes Integração de traços funcionais e abundância para métricas de redundância ecológica. Ver estudo\n\n\n ### Curso: Do Dado ao Artigo Formação aplicada em organização de dados, análise em R e escrita científica orientada. Saiba mais"
-  },
-  {
-    "objectID": "index.html#contato",
-    "href": "index.html#contato",
-    "title": "Wesley Neves",
-    "section": "Contato",
-    "text": "Contato\n\n wesley.neves@ufpe.br\n github.com/wesneves"
-  },
-  {
-    "objectID": "cursos/index.html",
-    "href": "cursos/index.html",
-    "title": "Cursos Oferecidos",
-    "section": "",
-    "text": "Do Dado ao Artigo\n\n\nAnálise Quantitativa no R: Modelagem, Multivariada e Produção Científica\n\n\n\n\n\n\n\n\n27 de fev. de 2026\n\n\nWesley de Oliveira Neves\n\n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "contato/index.html",
-    "href": "contato/index.html",
-    "title": "Entre em Contato",
-    "section": "",
-    "text": "Nenhum item correspondente"
+    "text": "Explore nossos nossos livros\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUniverso R\n\n\n\n\n\n\n\n\nNenhum item correspondente"
   },
   {
     "objectID": "cursos/sympla.html",
@@ -203,11 +154,67 @@
     "text": "🔐 Área Exclusiva do Aluno\n\n\n\n\n\n\nAvisoClique para expandir: Materiais e Scripts das Aulas\n\n\n\n\n\nPara garantir a integridade dos scripts desenvolvidos em aula, os arquivos abaixo estão compactados e protegidos por senha.\nA senha foi disponibilizada no chat da sala virtual e no e-mail de boas-vindas do Sympla.\n\n\n\nConteúdo\nLink de Acesso\nFormato\n\n\n\n\nScript e Conteúdo - Aula 1\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 2\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 3\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 4\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 5\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 6\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 7\nAcessar Pasta\n.ZIP (Protegido)\n\n\nScript e Conteúdo - Aula 8\nAcessar Pasta\n.ZIP (Protegido)\n\n\n\nProblemas com o acesso? Entre em contato pelo chat do Sympla."
   },
   {
-    "objectID": "livros/index.html",
-    "href": "livros/index.html",
-    "title": "Livros",
+    "objectID": "contato/index.html",
+    "href": "contato/index.html",
+    "title": "Entre em Contato",
     "section": "",
-    "text": "Nenhum item correspondente"
+    "text": "Tem alguma dúvida sobre o curso Do Dado ao Artigo, o livro Universo R ou quer colaborar em algum projeto de Oceanografia? Preencha o formulário abaixo e responderei o mais breve possível.\n\n  \n    \n    \n      Nome Completo\n      \n    \n\n    \n      E-mail\n      \n    \n\n    \n      Assunto\n      \n    \n\n    \n      Mensagem\n      \n    \n\n    \n      Enviar Mensagem"
+  },
+  {
+    "objectID": "cursos/index.html",
+    "href": "cursos/index.html",
+    "title": "Cursos Oferecidos",
+    "section": "",
+    "text": "Explore nossos cursos focados em Biologia, Programação R e Ciência de Dados.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDo Dado ao Artigo\n\n\n\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Wesley Neves",
+    "section": "",
+    "text": "“Nada na vida deve ser temido, apenas compreendido. Agora é a hora de compreender mais, para que possamos temer menos.”\n— Marie Skłodowska-Curie"
+  },
+  {
+    "objectID": "index.html#linhas",
+    "href": "index.html#linhas",
+    "title": "Wesley Neves",
+    "section": "Linhas de pesquisa",
+    "text": "Linhas de pesquisa\n\n\n Ecologia de Comunidades\nEstrutura e dinâmica da biodiversidade em ambientes costeiros e estuarinos, com abordagem funcional, filogenética e taxonômica.\n\n\n Modelagem em R\nGLMs, GAMs, modelos mistos, análise multivariada e séries temporais para inferência ecológica mais robusta.\n\n\n Formação Científica\nTreinamentos práticos para quem deseja sair do “dado bruto” e chegar ao artigo com mais segurança metodológica."
+  },
+  {
+    "objectID": "index.html#projetos",
+    "href": "index.html#projetos",
+    "title": "Wesley Neves",
+    "section": "Projetos em destaque",
+    "text": "Projetos em destaque\n\n\n Monitoramento ecológico costeiro: Modelagem de diversidade e sazonalidade em gradientes ambientais estuarinos. Ver estudo\n\n\n Diversidade funcional de copépodes: Integração de traços funcionais e abundância para métricas de redundância ecológica. Ver estudo\n\n\n Curso: Do Dado ao Artigo: Formação aplicada em organização de dados, análise em R e escrita científica orientada. Saiba mais"
+  },
+  {
+    "objectID": "index.html#radar",
+    "href": "index.html#radar",
+    "title": "Wesley Neves",
+    "section": "Radar R: O que acompanhar",
+    "text": "Radar R: O que acompanhar\n\n\n Versão Atual do R\nFique de olho na versão do R. Mantenha-o sempre atualizado para acompanhar as melhorias e novidades.\nLer NEWS oficial\n\n\n CRAN Task Views\nO mapa definitivo para pacotes. As listas orientam sobre quais pacotes são relevantes para tarefas específicas.\nExplorar Task Views"
+  },
+  {
+    "objectID": "index.html#comunidade",
+    "href": "index.html#comunidade",
+    "title": "Wesley Neves",
+    "section": "Curiosidades e Comunidade",
+    "text": "Curiosidades e Comunidade\n\nO R é movido pela comunidade. Se você busca inspiração diária, o R-Bloggers e a R Weekly são paradas obrigatórias.\n\nR-Bloggers R Weekly"
+  },
+  {
+    "objectID": "livros/universo_r.html",
+    "href": "livros/universo_r.html",
+    "title": "Universo R",
+    "section": "",
+    "text": "Este livro foi pensado para transformar a sua relação com os dados científicos, ele é uma extensão completa do curso DoDadoAoArtigo. A metáfora do Universo que utilizei é para lembrar que a análise de dados não deve ser uma sequência de acidentes manuais, mas um ecossistema governado por leis claras, onde o código é a lei e a reprodutibilidade é a gravidade que mantém tudo unido, coisa que só conseguimos ao utilizar a linguagem R (ou outras linguagens que possuam a mesma amplitude do R)."
+  },
+  {
+    "objectID": "livros/universo_r.html#estruturação-do-livro",
+    "href": "livros/universo_r.html#estruturação-do-livro",
+    "title": "Universo R",
+    "section": "Estruturação do livro",
+    "text": "Estruturação do livro\n\nParte 1: O Big Bang (A Transição)Parte 2: As Leis da Natureza (Estatística e Visualização)Parte 3: Mapeando o Espaço (Geoespacial)Parte 4: Radiação de Fundo (Produção Textual e Web)Parte 5: Criando Novas Galáxias (Desenvolvimento)\n\n\nO objetivo dessa sessão é entender as vantagens em utilizar o R em relação ao método tradicional e ir migrando aos poucos, vamos abordar questões sobre linguagens de programação, funcionamento R, curadoria de dados, tipagem tidyverse\n\n01 O Caos dos Softwares Fragmentados\n02 Habitando o Universo R\n03 Adeus, Planilhas!\n\n\n\nNessa sessão abordamos a gramática dos gráficos, os princípios da metodologia científica e do pensamento científico e finalizamos o capítulo falando um pouco sobre ecologia de comunidades no R.\n\n04 A Gramática dos Gráficos\n05 O Motor Estatístico e Científico\n06 Ecologia Quantitativa no R\n\n\n\nSessão destinada ao sensoriamento remoto e criação de mapas e gráficos estilizados.\n\n07 O R como SIG\n08 Visualização de Resultados Espaciais\n\n\n\nNessa sessão iremos conseguir a liberdade dos produtores textuais inflexívos como os do pacote office e aprender a como apresentar os resultados de maneira satisfatória, seja escrevendo slides no R ou criando sites interativos e profissionais.\n\n09 Produção Textual no RStudio\n10 Comunicação e Apresentação de Resultados no R\n11 Sua Janela para o Mundo (Websites)\n\n\n\nPor fim, finalizamos o livro abordando questões de desenvolvimento de pacotes e escritas de funções\n\n12 Do Script à Função\n13 Criando seu Primeiro Pacote"
   },
   {
     "objectID": "posts/index.html",

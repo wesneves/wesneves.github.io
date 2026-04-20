@@ -3,6 +3,7 @@ title: "Do Dado ao Artigo"
 subtitle: "Análise Quantitativa no R: Modelagem, Multivariada e Produção Científica"
 author: "Wesley de Oliveira Neves"
 date: "2026-02-27"
+image: Imagens/pintor.png
 ---
 
 ::: {.welcome-box}

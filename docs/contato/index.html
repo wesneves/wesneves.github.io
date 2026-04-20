@@ -33,8 +33,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -72,70 +70,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Procurar"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -154,23 +94,23 @@ window.Quarto = {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../sobre/about.html"> 
-<span class="menu-text">🪪 Sobre</span></a>
+<span class="menu-text">Sobre</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../posts/index.html"> 
-<span class="menu-text">📝 Blog/Dicas</span></a>
+<span class="menu-text">Blog/Dicas</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../cursos/index.html"> 
-<span class="menu-text">🎓 Cursos</span></a>
+<span class="menu-text">Cursos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../livros/index.html"> 
-<span class="menu-text">🪪 Livros</span></a>
+<span class="menu-text">Livros</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="../contato/index.html" aria-current="page"> 
-<span class="menu-text">📲 Contato</span></a>
+<span class="menu-text">Contato</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -183,8 +123,7 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tudo <span class="quarto-category-count">(0)</span></div></div></div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -207,16 +146,39 @@ window.Quarto = {
 </header>
 
 
+<p>Tem alguma dúvida sobre o curso <strong>Do Dado ao Artigo</strong>, o livro <strong>Universo R</strong> ou quer colaborar em algum projeto de Oceanografia? Preencha o formulário abaixo e responderei o mais breve possível.</p>
+<div class="contact-form" style="max-width: 600px; margin: 20px 0;">
+  <form action="[https://formspree.io/f/xpwzyqjr](https://formspree.io/f/xpwzyqjr)" method="POST">
+    
+    <div style="margin-bottom: 15px;">
+      <label style="display: block; font-weight: bold;">Nome Completo</label>
+      <input type="text" name="name" required="" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+    </div>
 
+    <div style="margin-bottom: 15px;">
+      <label style="display: block; font-weight: bold;">E-mail</label>
+      <input type="email" name="_replyto" required="" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+    </div>
 
+    <div style="margin-bottom: 15px;">
+      <label style="display: block; font-weight: bold;">Assunto</label>
+      <input type="text" name="subject" required="" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+    </div>
 
+    <div style="margin-bottom: 15px;">
+      <label style="display: block; font-weight: bold;">Mensagem</label>
+      <textarea name="message" rows="5" required="" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;"></textarea>
+    </div>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-
+    <button type="submit" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+      Enviar Mensagem
+    </button>
+  </form>
 </div>
-<div class="listing-no-matching d-none">Nenhum item correspondente</div>
-</div></main> <!-- /main -->
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -1,17 +1,20 @@
 /* ========================================= */
-/* 1. IDENTIDADE VISUAL                      */
+/* 1. IDENTIDADE VISUAL                     */
 /* ========================================= */
 
 :root {
   --primary-color: #0a3d62;
   --secondary-color: #38ada9;
+  --accent-color: #d81e5b;
   --text-main: #2c2c2c;
   --bg-light: #f8f9fa;
   --transition: all 0.3s ease;
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --shadow-soft: 0 8px 30px rgba(0,0,0,0.06);
 }
 
 /* ========================================= */
-/* 2. TIPOGRAFIA                             */
+/* 2. BASE & TIPOGRAFIA                     */
 /* ========================================= */
 
 body {
@@ -21,7 +24,6 @@ body {
   font-size: 17px;
 }
 
-/* Títulos com mais personalidade */
 h1, h2, h3, .navbar-brand {
   font-family: "Georgia", serif;
   color: var(--primary-color);
@@ -35,120 +37,236 @@ h1 {
 
 h2 {
   margin-top: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   border-left: 4px solid var(--primary-color);
-  padding-left: 12px;
+  padding-left: 15px;
 }
 
 /* ========================================= */
-/* 3. LINKS                                  */
+/* 3. ELEMENTOS DE LAYOUT (GRIDS & CARDS)    */
 /* ========================================= */
 
-a {
-  color: var(--primary-color);
-  transition: var(--transition);
+.features-grid, .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
 }
 
-a:hover {
-  color: var(--secondary-color);
-}
-
-/* ========================================= */
-/* 4. NAVBAR                                 */
-/* ========================================= */
-
-.navbar {
-  border-bottom: 1px solid #eee;
-}
-
-.nav-link {
-  font-weight: 500;
-}
-
-.nav-link:hover {
-  color: var(--primary-color) !important;
-}
-
-/* ========================================= */
-/* 5. HERO BOX                               */
-/* ========================================= */
-
-.hero-box {
-  text-align: center;
-  padding: 70px 40px;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-  margin: 60px 0;
-}
-
-/* ========================================= */
-/* 6. CARDS                                  */
-/* ========================================= */
-
-.card {
-  border: none;
+.feature-card, .project-card, .resource-box, .contact-card {
+  background: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.feature-card:hover, .project-card:hover, .resource-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+.project-card img {
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: auto;
+}
+
+/* ========================================= */
+/* 4. BANNER MARIE CURIE (GLASSMORPHISM)     */
+/* ========================================= */
+
+.curie-banner {
+  background-image: linear-gradient(120deg, rgba(35,9,58,0.92), rgba(12,45,92,0.85)), 
+                    url('https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1800&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 100px 20px;
+  color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+}
+
+.curie-glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  padding: 3rem;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.curie-glass-card blockquote {
+  border: none !important;
+  font-style: italic;
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+h3.curie-title {
+  color: #ffffff !important;
+  border-left: none !important;
+  padding-left: 0 !important;
+  margin-top: 0;
+}
+
+/* ========================================= */
+/* 5. PERFIL & BIO                          */
+/* ========================================= */
+
+.layout-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.profile-sidebar { text-align: center; }
+
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border: 4px solid #f8f9fa;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.profile-subtitle {
+  display: block;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.profile-social {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.profile-social a {
+  color: #444;
   transition: var(--transition);
 }
 
-.card:hover {
-  transform: translateY(-6px);
+.profile-social a:hover { color: var(--secondary-color); }
+
+/* ========================================= */
+/* 6. FORMULÁRIO DE CONTATO (ESTILO PREMIUM) */
+/* ========================================= */
+
+.contact-card {
+  max-width: 700px;
+  margin: 3rem 0;
+  padding: 2.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+  font-size: 0.95rem;
+}
+
+.form-group input, 
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1.5px solid #e1e8ed;
+  border-radius: 10px;
+  font-family: inherit;
+  transition: var(--transition);
+  background-color: #fcfdfe;
+  box-sizing: border-box;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 4px rgba(56, 173, 169, 0.1);
+  background-color: #fff;
+}
+
+.btn-submit-elegant {
+  background: linear-gradient(135deg, var(--primary-color), #1e5a8a);
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(10, 61, 98, 0.2);
+}
+
+.btn-submit-elegant:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(10, 61, 98, 0.3);
+  filter: brightness(1.1);
 }
 
 /* ========================================= */
-/* 7. CÓDIGO                                 */
+/* 7. COMPONENTES R & EXTRAS                */
 /* ========================================= */
+
+.card-r-version { border-top: 5px solid #276BBE !important; }
+.card-r-version i { color: #276BBE; font-size: 2rem; margin-bottom: 10px; display: block; }
+
+.card-cran-views { border-top: 5px solid var(--secondary-color) !important; }
+.card-cran-views i { color: var(--secondary-color); font-size: 2rem; margin-bottom: 10px; display: block; }
+
+.feature-card h3 { border-left: none !important; padding-left: 0 !important; margin-top: 10px; font-family: 'Inter', sans-serif; font-size: 1.3rem; }
+
+.project-link {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: #f1f5f9;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  display: inline-block;
+  color: var(--primary-color) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+}
+
+.project-link:hover {
+  background: var(--primary-color);
+  color: white !important;
+  transform: translateX(5px);
+}
 
 code {
   background: #f1f5f9;
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
   font-family: 'Fira Code', monospace;
+  font-size: 0.9em;
 }
 
-pre {
-  border-radius: 10px !important;
-}
-
-
-.hero-box {
-  border-radius: 20px;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  padding: 5rem 2rem;
-  margin-bottom: 2rem;
-}
-
-.subtitle {
-  font-size: 1.1rem;
-  opacity: .95;
-  margin-bottom: 1rem;
-}
-
-.stats-strip {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
-  margin: 1.5rem 0 2rem;
-}
-
-.stat-item, .feature-card, .project-card {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 1rem;
-  box-shadow: 0 6px 20px rgba(0,0,0,.08);
-}
-
-.features-grid, .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
-
-.project-card img {
-  border-radius: 10px;
-  margin-bottom: .8rem;
+/* Responsividade Geral */
+@media (max-width: 768px) {
+  .layout-grid { grid-template-columns: 1fr; }
+  .contact-card { padding: 1.5rem; }
 }

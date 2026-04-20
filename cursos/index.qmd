@@ -2,7 +2,14 @@
 title: "Cursos Oferecidos"
 listing:
   contents: "."
-  type: default
+  type: grid
   categories: true
   sort: "date desc"
+  grid-columns: 3
+  image-height: "250px"
+  grid-item-border: true
+  grid-item-align: left      
+  fields: [image, title, description, categories]
 ---
+
+Explore nossos cursos focados em Biologia, Programação R e Ciência de Dados.
